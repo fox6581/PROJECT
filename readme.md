@@ -1,0 +1,1 @@
+cd apple-store-backend> npm run dev:all

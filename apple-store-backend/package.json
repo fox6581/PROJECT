@@ -1,0 +1,34 @@
+{
+  "name": "tigran-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.ts",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "serve": "cross-env DATABASE_URL=file:./dev.db node dist/index.js",
+    "server": "npm run serve", 
+    "client": "yarn --cwd ../front-vue3 serve", 
+    "dev:all": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.0",
+    "prisma": "^5.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1"
+  }
+}
